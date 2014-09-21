@@ -1,11 +1,16 @@
                              CL-LOCATIVES
-                             ------------
+                             ============
 
                            By Robert Smith
 
 Locatives are the Lisp equivalent of pointers, minus the
 arithmetic. In Lisp terms, they make the concept of "places"
 first-class.
+
+The main API consists of the macro LOCATIVE-FOR, which takes as an
+argument a place, as you would give to SETF; and the function
+DEREFERENCE, which extracts the value of that place, and (SETF
+DEREFERENCE), which sets the value of that place.
 
 The following example pretty much sums up the API:
 
